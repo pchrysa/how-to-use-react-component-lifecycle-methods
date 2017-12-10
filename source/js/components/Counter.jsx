@@ -1,56 +1,48 @@
 import React from 'react';
 
-let Counter = React.createClass({
-
-  getDefaultProps: function () {
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
     console.debug('getDefaultProps');
+    console.debug('setInitialState');
+  }
 
-    return {};
-  },
-
-  getInitialState: function () {
-    console.debug('getInitialState');
-
-    return {};
-  },
-
-  componentWillMount: function () {
+  componentWillMount() {
     console.debug('componentWillMount');
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
     console.debug('componentDidMount');
-  },
+  }
 
-  componentWillReceiveProps: function () {
+  componentWillReceiveProps() {
     console.debug('componentWillReceiveProps');
-  },
+  }
 
-  shouldComponentUpdate: function () {
+  shouldComponentUpdate() {
     console.debug('shouldComponentUpdate');
-
     return true;
-  },
+  }
 
-  componentWillUpdate: function () {
+  componentWillUpdate() {
     console.debug('componentWillUpdate');
-  },
+  }
 
-  componentDidUpdate: function () {
+  componentDidUpdate() {
     console.debug('componentDidUpdate');
-  },
+  }
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     console.debug('componentWillUnmount');
-  },
+  }
 
-  render: function () {
+  render() {
     console.debug('render');
 
     return (
       <h1 className="text-muted">Counter: {this.props.value}</h1>
     );
   }
-});
+}
 
 export default Counter;
